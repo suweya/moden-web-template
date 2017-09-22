@@ -1,0 +1,28 @@
+{
+  "name": "moden-template-webpack",
+  "version": "0.0.1",
+  "description": "moden web project template (ES6 CSS Module ESLint Webpack)",
+  "main": "index.js",
+  "dependencies": {
+    "balanced-match": "^1.0.0",
+    "brace-expansion": "^1.1.8",
+    "fs.realpath": "^1.0.0",
+    "concat-map": "^0.0.1",
+    "glob": "^7.1.2",
+    "inherits": "^2.0.3",
+    "minimatch": "^3.0.4",
+    "once": "^1.4.0",
+    "rimraf": "^2.6.2",
+    "path-is-absolute": "^1.0.1",
+    "wrappy": "^1.0.2",
+    "inflight": "^1.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "suweya",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  }
+}
