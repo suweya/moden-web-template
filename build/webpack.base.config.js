@@ -19,6 +19,11 @@ var webpackConfig = {
     }
   },
   module: {
-    
+    noParse: /jquery/,
+    rules: [
+      {
+        
+      }
+    ]
   }
 }
