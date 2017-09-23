@@ -11,8 +11,8 @@ var entryConfigs = [
   {
     entryName: 'index/index',
     entry: path.resolve(srcDir, 'index/index.js'),
-    filename: 'index.html',
-    template: path.resolve(srcDir, 'index.html')
+    filename: 'index.pug',
+    template: path.resolve(srcDir, 'index.pug')
   }
 ];
 
@@ -27,7 +27,7 @@ srcFolders.forEach(entryFactory);
 
 function entryFactory(folderName) {
   var fileMark = findConfigEntryName(folderName);
-  var htmlFileName = fileMark + '.html';
+  var htmlFileName = fileMark + '.pug';
   var jsFilename = fileMark + '.js';
 
   var allFiles = fs.readdirSync(path.resolve(srcDir, folderName));
@@ -77,7 +77,7 @@ module.exports = {
     env: require('./env/dev'),
     assetsPublicPath: '/'
   },
-  build: {
+  prod: {
     env: require('./env/prod'),
     // 可配置 CDN
     assetsPublicPath: '/'
