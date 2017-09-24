@@ -13,6 +13,7 @@
 ## CSS
 
 - css module
+- 支持 css autoprefixer 
 
 ## BUILD
 

@@ -55,6 +55,17 @@ var webpackConfig = {
         })
       },
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            formatter: require('eslint-friendly-formatter')
+          }
+        },
+        include: [srcDir]
+      },
+      {
         test: /\.js$/,
         use: {
           loader: 'babel-loader'
