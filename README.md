@@ -1,6 +1,6 @@
 # moden web template
 
-## HTML (pug)
+## HTML
 
 - 支持`.pug`
 
@@ -13,3 +13,10 @@
 ## CSS
 
 - css module
+
+## BUILD
+
+- webpack
+- webpack-dev-server
+- 热更新
+- hash
