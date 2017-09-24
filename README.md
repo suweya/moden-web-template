@@ -1,5 +1,15 @@
 # moden web template
 
-## webpack entry
+## HTML (pug)
 
-- build/config/index.js
+- 支持`.pug`
+
+## JS
+
+- ES6 
+- babel-ployfill
+- babel-preset-env
+
+## CSS
+
+- css module
