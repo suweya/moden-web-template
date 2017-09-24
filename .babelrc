@@ -8,7 +8,9 @@
             "last 2 versions",
             "safari >= 7"
           ]
-        }
+        },
+        "modules": false, //https://zhuanlan.zhihu.com/p/29506685?utm_source=com.daimajia.gold&utm_medium=social
+        "useBuiltIns": "usage"
       }
     ]
   ]

@@ -13,7 +13,7 @@ config.entry.forEach(function (item) {
   entry[item.entryName] = item.entry;
 
   plugins.push(new HtmlWebpackPlugin({
-    filename: item.filename,
+    filename: item.filemark + '.html',
     template: item.template,
     chunks: ['manifest', 'vendor', 'app', item.entryName],
     env: PRODUCTION ? config.prod.env.NODE_ENV : config.dev.env.NODE_ENV

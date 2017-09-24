@@ -12,6 +12,7 @@ var entryConfigs = [
     entryName: 'index/index',
     entry: path.resolve(srcDir, 'index/index.js'),
     filename: 'index.pug',
+    filemark: 'index',
     template: path.resolve(srcDir, 'index.pug')
   }
 ];
@@ -29,16 +30,22 @@ function entryFactory(folderName) {
   var fileMark = findConfigEntryName(folderName);
   var htmlFileName = fileMark + '.pug';
   var jsFilename = fileMark + '.js';
+  var htmlFileNameSuffix = fileMark + '.html';
 
   var allFiles = fs.readdirSync(path.resolve(srcDir, folderName));
-  if (allFiles.indexOf(htmlFileName) === -1 || allFiles.indexOf(jsFilename) === -1) {
+  if ((allFiles.indexOf(htmlFileName) === -1 && allFiles.indexOf(htmlFileNameSuffix) === -1 ) || allFiles.indexOf(jsFilename) === -1) {
     return;
+  }
+
+  if (allFiles.indexOf(htmlFileName) === -1) {
+    htmlFileName = htmlFileNameSuffix;
   }
 
   entryConfigs.push({
     entryName: folderName + '/' + fileMark,
     entry: path.resolve(srcDir, folderName, jsFilename),
     filename: folderName + '/' + htmlFileName,
+    filemark: folderName + '/' + fileMark,
     template: path.resolve(srcDir, folderName + '/' + htmlFileName)
   });
 

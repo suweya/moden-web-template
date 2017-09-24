@@ -18,6 +18,7 @@ var webpackConfig = {
       filename: config.assetsSubDirectory + '/css/[name].[contenthash:9].css',
       allChunks: true
     }),
+    // https://doc.webpack-china.org/plugins/commons-chunk-plugin
     new webpack.optimize.CommonsChunkPlugin({
       names: config.commonsChunkName,
       filename: config.assetsSubDirectory + '/js/[name].[chunkhash:9].js',
