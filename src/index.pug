@@ -1,10 +1,20 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
-    //- script(type='text/javascript').
-    //-   alert('Hello Pug')
+    title moden web template
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
   body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              h3.masthead-brand MWT
+              nav.nav.nav-masthead
+                a.nav-link.active(href="#") Home
+                a.nav-link(href="#") Feature
+                a.nav-link(href="#") Contact
+          .inner.cover
     h1 Index
     #container.col
       if true

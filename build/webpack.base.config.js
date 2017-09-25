@@ -21,7 +21,7 @@ config.entry.forEach(function (item) {
   }));
 });
 
-entry.vendor = ['jquery', 'normalize.css'];
+entry.vendor = ['jquery', 'normalize.css', 'bootstrap/dist/css/bootstrap.css'];
 
 var webpackConfig = {
   entry: entry,

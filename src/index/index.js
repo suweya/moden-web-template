@@ -1,6 +1,6 @@
 // import $ from 'jquery'
 import './index.css'
-import 'common/css/app.css'
+// import 'common/css/app.css'
 import app from 'common/js/app'
 
 $(function() {
