@@ -15,7 +15,7 @@ config.entry.forEach(function (item) {
   plugins.push(new HtmlWebpackPlugin({
     filename: item.filemark + '.html',
     template: item.template,
-    chunks: ['manifest', 'vendor', item.entryName],
+    chunks: ['common', 'manifest', 'vendor', item.entryName],
     minify: PRODUCTION ? config.prod.htmlMinify : config.dev.htmlMinify,
     env: PRODUCTION ? config.prod.env.NODE_ENV : config.dev.env.NODE_ENV
   }));
@@ -27,7 +27,8 @@ var webpackConfig = {
   entry: entry,
   resolve: {
     alias: {
-      src: path.resolve(__dirname, '../src')
+      src: path.resolve(__dirname, '../src'),
+      common: path.resolve(__dirname, '../src/common')
     }
   },
   module: {

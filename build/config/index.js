@@ -100,7 +100,7 @@ module.exports = {
   entry: entryConfigs,
   assetsRoot: path.resolve(__dirname, '../../dist'),
   assetsSubDirectory: 'static',
-  commonsChunkName: ['app', 'vendor', 'manifest'],
+  commonsChunkName: ['common', 'vendor', 'manifest'],
   dev: {
     env: {
       NODE_ENV: '"development"'
