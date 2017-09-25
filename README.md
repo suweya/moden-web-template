@@ -12,7 +12,6 @@
 
 ## CSS
 
-- css module
 - 支持 css autoprefixer 
 
 ## BUILD
@@ -21,3 +20,12 @@
 - webpack-dev-server
 - 热更新
 - hash
+
+
+## TODO
+
+- [ ] CSS Module
+- [ ] test
+- [ ] proxy mock
+- [ ] sass
+- [ ] stylus

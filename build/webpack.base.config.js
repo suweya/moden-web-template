@@ -15,7 +15,7 @@ config.entry.forEach(function (item) {
   plugins.push(new HtmlWebpackPlugin({
     filename: item.filemark + '.html',
     template: item.template,
-    chunks: ['manifest', 'vendor', 'app', item.entryName],
+    chunks: ['manifest', 'vendor', item.entryName],
     env: PRODUCTION ? config.prod.env.NODE_ENV : config.dev.env.NODE_ENV
   }));
 });
@@ -104,7 +104,7 @@ var webpackConfig = {
     new webpack.BannerPlugin({
       banner: "hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]"
     }),
-    new webpack.ProgressPlugin({
+    new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.$': 'jquery',
