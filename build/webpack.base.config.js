@@ -40,6 +40,12 @@ var webpackConfig = {
         }
       },
       {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader'
+        }
+      },
+      {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -79,7 +85,7 @@ var webpackConfig = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
+              limit: 5000,
               name: config.assetsSubDirectory + '/img/[name].[hash:9].[ext]',
               publicPath: PRODUCTION ? config.prod.assetsPublicPath : config.dev.assetsPublicPath
             }
