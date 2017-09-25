@@ -75,18 +75,45 @@ function findConfigEntryName(folderName) {
   return 'index';
 }
 
+// https://github.com/kangax/html-minifier#options-quick-reference
+var htmlMinify = {
+  caseSensitive: true,
+  collapseBooleanAttributes: true,
+  collapseInlineTagWhitespace: true,
+  collapseWhitespace: true,
+  minifyJS: true,
+  minifyCSS: true,
+  minifyURLs: true
+  /* removeAttributeQuotes: true,
+  removeComments: true,
+  removeEmptyAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  sortAttributes: true,
+  sortClassName: true,
+  useShortDoctype: true */
+}
+
 module.exports = {
   entry: entryConfigs,
   assetsRoot: path.resolve(__dirname, '../../dist'),
   assetsSubDirectory: 'static',
   commonsChunkName: ['app', 'vendor', 'manifest'],
   dev: {
-    env: require('./env/dev'),
-    assetsPublicPath: '/'
+    env: {
+      NODE_ENV: '"development"'
+    },
+    assetsPublicPath: '/',
+    htmlMinify: false
   },
   prod: {
-    env: require('./env/prod'),
+    env: {
+      NODE_ENV: '"production"'
+    },
     // 可配置 CDN
-    assetsPublicPath: '/'
+    assetsPublicPath: '/',
+    htmlMinify: htmlMinify
   }
 }

@@ -16,6 +16,7 @@ config.entry.forEach(function (item) {
     filename: item.filemark + '.html',
     template: item.template,
     chunks: ['manifest', 'vendor', item.entryName],
+    minify: PRODUCTION ? config.prod.htmlMinify : config.dev.htmlMinify,
     env: PRODUCTION ? config.prod.env.NODE_ENV : config.dev.env.NODE_ENV
   }));
 });
