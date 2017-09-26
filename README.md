@@ -24,7 +24,7 @@
 
 ## TODO
 
-- [ ] CSS Module
+- [ ] IE8
 - [ ] test
 - [ ] proxy mock
 - [ ] sass

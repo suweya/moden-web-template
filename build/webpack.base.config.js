@@ -21,7 +21,7 @@ config.entry.forEach(function (item) {
   }));
 });
 
-entry.vendor = ['jquery', 'normalize.css'];
+entry.vendor = ['babel-polyfill', 'jquery', 'normalize.css'];
 
 var webpackConfig = {
   entry: entry,
