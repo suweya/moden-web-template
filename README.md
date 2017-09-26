@@ -26,6 +26,6 @@
 
 - [ ] IE8
 - [ ] test
-- [ ] proxy mock
+- [X] ~~proxy mock~~
 - [ ] sass
 - [ ] stylus
