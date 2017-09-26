@@ -2,10 +2,12 @@
 import './index.css'
 import 'common/css/app.css'
 import app from 'common/js/app'
-import axios from 'common/js/axios'
+import { getApps } from 'common/js/api'
 
 $(function () {
-  axios.getAuth('auth', {})
+  getApps().then(val => {
+    app(val)
+  })
 
   $('#btn').on('click', (e) => {
     Delay(500, 'Button Click').then(val => {

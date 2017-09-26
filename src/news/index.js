@@ -1,9 +1,11 @@
 import 'common/css/app.css'
 import app from 'common/js/app'
-import axios from 'common/js/axios'
+import * as api from 'common/js/api'
 
 $(() => {
-  axios.getAuth('auth', {})
+  api.getApps().then(val => {
+    app(val)
+  })
 
   app('about')
 })
