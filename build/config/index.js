@@ -114,6 +114,10 @@ module.exports = {
     },
     // 可配置 CDN
     assetsPublicPath: '/',
-    htmlMinify: htmlMinify
+    htmlMinify: htmlMinify,
+    /**
+     * npm run build --report
+     */
+    bundleAnalyzerReport: process.env.npm_config_report
   }
 }

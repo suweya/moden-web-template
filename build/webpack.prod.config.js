@@ -31,4 +31,9 @@ var webpackConfig = {
   devtool: 'source-map'
 }
 
+if (config.prod.bundleAnalyzerReport) {
+  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+}
+
 module.exports = webpackMerge(webpackBaseConfig, webpackConfig)
