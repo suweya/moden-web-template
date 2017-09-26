@@ -12,6 +12,7 @@
         "modules": false, //https://zhuanlan.zhihu.com/p/29506685?utm_source=com.daimajia.gold&utm_medium=social
         "useBuiltIns": "usage"
       }
-    ]
+    ],
+    "stage-2"
   ]
 }

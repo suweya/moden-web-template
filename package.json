@@ -4,6 +4,7 @@
   "description": "moden web project template (ES6 CSS Module ESLint Webpack)",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
@@ -19,6 +20,7 @@
     "babel-eslint": "^8.0.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "eslint": "^4.7.2",
